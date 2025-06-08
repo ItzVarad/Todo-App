@@ -1,0 +1,132 @@
+/* Reset & base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    0deg,
+    rgb(193, 156, 233) 0%,
+    rgb(66, 120, 227) 50%,
+    rgb(95, 103, 175) 100%
+  );
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container */
+.todo-container {
+  background: linear-gradient(
+  0deg,
+  rgb(213, 192, 247) 0%,
+  rgb(146, 182, 254) 50%,
+  rgb(178, 194, 250) 100%
+);
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 150%;
+  max-width: 500px;
+}
+
+/* Header */
+.todo-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input section */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+#todo-input:focus {
+  border-color: #3f51b5;
+  outline: none;
+}
+
+#add-btn {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#add-btn:hover {
+  background-color: #303f9f;
+}
+
+/* Todo List */
+#todo-list {
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f6fa;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.todo-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.todo-text {
+  font-size: 16px;
+  word-break: break-word;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.todo-actions button:hover {
+  color: #000;
+}
+
+.strike-text{
+  text-decoration: line-through;
+}
